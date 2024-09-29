@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px 35px 20px;
+}
+
+.header-hello {
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.header-hello h1 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 550;
+    font-size: 54px;
+}
+
+.header-hello h3 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.header-image {
+    height: 340px;
+    width: 340px;
+    animation: zoomIn 1s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.header-image:hover {
+    transform: scale(1.06);
+}
+
+.my-skills h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 450;
+    font-size: 40px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.skills-item {
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+    list-style: none;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.skills-item li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+}
+
+.skills-item img {
+    width: 48px;
+    height: 48px;
+    transition: 0.3s;
+}
+
+.skills-item img:hover {
+    transform: scale(1.2);
+}
+
+.contact {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-text h1, .contact-text p {
+    font-family: "Lato", sans-serif;
+}
+
+.contact-text h1 {
+    font-weight: 450;
+    font-size: 40px;
+}
+
+.contact-text p {
+    font-weight: 400;
+    font-size: 17px;
+    opacity: .7;
+    display: inline-flex;
+    align-items: center;
+}
+
+.button-tg {
+    display: inline-flex;
+    border: none;
+    background: none;
+    padding: 0;
+    margin-left: 5px; 
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content-true , .modal-content-error {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input, .textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: 0;
+    transition: border-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.textarea {
+    height: 150px;
+    resize: vertical;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+}
+
+.button_send {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 13px 13px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    width: 130px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button_send:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+input:hover, .textarea:hover {
+    border-color: #0056b3;
+}
+
+input:focus, .textarea:focus {
+    border-color: #0056b3;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .4);
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content-true,  .modal-content-error {
+    background-color: white;
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+    padding: 30px;
+    max-height: 350px;
+    max-width: 970px;
+    overflow-y: auto;
+}
+
+.modal-content-true h1, .modal-content-error h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 47px;
+}
+
+.modal-content-true p, .modal-content-error p {
+    font-family: "Mulish", sans-serif;
+    font-weight: 260;
+    font-size: 17px;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-tg {
+    height: 25px;
+    width: 25px;
+}
+
+.button-close-true, .button-close-error {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 13px 13px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    width: 130px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-close-true:hover, .button-close-error:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.modal p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.change_language_button {
+    margin: 15px; 
+    font-family: "Lato", sans-serif;
+    display: flex;
+    gap: 13px;
+}
+
+.change_language_button button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.change_language_button img {
+    margin-right: 5px;
+    transition: filter 0.2s ease;
+}
+
+.change_language_button img:hover {
+    filter: brightness(0.94);
+}
+
+@media (max-width: 600px) {
+    .skills-item {
+        display: grid;
+        gap: 50px; 
+        padding-left: 65px;
+    }
+
+
+    .contact-text p {
+        padding-top: 5px;
+    }
+
+    .skills-item span {
+        font-size: 19px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-hello h1, .header-hello h3 {
+        margin-bottom: 6px;
+    }
+
+    .change_language_button {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button-container-modal {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.telegram-button, .gmail-button {
+    display: flex;
+    align-items: center;
+    background-color: #5bc0de;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    width: 150px;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.telegram-button:hover, .gmail-button:hover {
+    background-color: #49a5c6;
+    transform: scale(1.05);
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+
+
+@media (max-width: 336px) {
+    .header-image {
+        height: 300px;
+        width: 300px;
+    }
+
+    .change_language_button {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 385px) {
+    .telegram-button, .gmail-button {
+        width: 120px;
+    }
+}
+
+@media (max-width: 290px) {
+    .telegram-button, .gmail-button {
+        width: 110px;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Frontend </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/icon-img.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="change_language_button">
+        <button onclick="changeLanguage('en')"><img src="./img/img_usa.png" alt="img_en" width="23px" height="23px">EN</button>
+        <button onclick="changeLanguage('ua')"><img src="./img/img_ua.png" alt="img_ua" width="23px" height="23px">UA</button>
+        <button onclick="changeLanguage('ru')"><img src="./img/img_ru.png" alt="img_ru" width="23px" height="23px">RU</button>
+        <button onclick="changeLanguage('de')"><img src="./img/img_de.png" alt="img_de" width="23px" height="23px">DE</button>
+    </div>
+    <section class="header-section">
+        <header class="header">
+            <div class="header-hello">
+                <h1 data-translate="h1_header">Hi, I'm Bogdan!</h1>  
+                <h3 data-translate="h3_header">Nice to meet you</h3>
+            </div>
+            <div class="header-img">
+                <img class="header-image" src="./img/header-img.png" alt="header-img">
+            </div>
+        </header>
+    </section>
+
+    <section class="my-skills-section" style="border-top: 1px solid #e3e3e3;">
+        <div class="my-skills">
+            <h1 data-translate="h1_skills">Frontend Development</h1>
+        </div>
+        <ul class="skills-item">
+            <li>
+                <img src="./img/html.svg" alt="html-icon">
+                <span>HTML</span>
+            </li>
+            <li>
+                <img src="./img/css.svg" alt="css-icon">
+                <span>CSS</span>
+            </li>
+            <li>
+                <img src="./img/js.svg" alt="javascript-icon">
+                <span>JavaScript</span>
+            </li>
+            <li>
+              <img src="./img/Wordpress-icon.png" alt="Wordpress-icon">
+              <span>WordPress</span>
+            </li>
+            <li>
+                <img src="./img/react.svg" alt="react-icon">
+                <span>React</span>
+            </li>
+            <li>
+                <img src="./img/git.svg" alt="git-icon">
+                <span>Git</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="contact-section" style="border-top: 1px solid #e3e3e3;">
+        <div class="contact">
+            <div class="contact-text">
+                <h1 data-translate="h1_contact">Contact</h1>
+                <p data-translate="p_contact" style="margin-top: 10px; line-height: 25px;">
+                  If you have any questions, please contact me using the form below or directly by email or telegram.
+                <p data-translate="p_contact2">will be happy to answer them!</p>
+              </p>
+              <div class="button-container">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gameraaron037@gmail.com" class="gmail-button" aria-label="Gmail">
+                  <img src="./img/Email-icon.png" alt="Email" class="icon" height="25px" width="25px">Email
+              </a>
+                <a href="https://t.me/aaron_228" class="telegram-button" aria-label="Telegram">
+                    <img src="./img/Telegram_logo.svg" alt="Telegram" class="icon" height="25px" width="25px"> Telegram
+                </a>
+            </div>
+            </div>
+
+            <form class="contact-main">
+                <input type="text" class="name" id="name_id" placeholder="Name" required>
+                <input type="email" class="email" id="email_id" placeholder="E-mail" required>
+                <textarea name="text" class="textarea" id="textarea_id" placeholder="Message" required></textarea>
+                <button type="submit" class="button_send" data-translate="contact_submit_button">Send</button>
+            </form>
+            <div class="modal">
+                <div class="modal-content-true" style="display: none;">
+                    <h1 data-translate="h1_modal_true">Your message has been sent ✅</h1>
+                    <p data-translate="p_modal_true">Thank you for contacting me. You can also contact me directly via email or Telegram.
+                        <p data-translate="p_contact2" style="margin-left: 5px;">will be happy to answer them!</p>
+                    </p>
+                    <div class="button-container-modal">
+                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gameraaron037@gmail.com" class="gmail-button" aria-label="Gmail">
+                        <img src="./img/Email-icon.png" alt="Email" class="icon" height="25px" width="25px">Email
+                    </a>
+                      <a href="https://t.me/aaron_228" class="telegram-button" aria-label="Telegram">
+                          <img src="./img/Telegram_logo.svg" alt="Telegram" class="icon" height="25px" width="25px"> Telegram
+                      </a>
+                  </div>
+                    <button class="button-close-true" data-translate="button_modal_true">Close</button>
+                </div>
+
+                <div class="modal-content-error" style="display: none;">
+                    <h1 data-translate="h1_modal_error">Your message was not sent ❌</h1>
+                    <p data-translate="p_modal_error">You can also contact me directly via email or Telegram.
+                        <button class="button-tg">
+                            <a href="https://t.me/aaron_228">
+                                <img class="modal-tg" src="./img/Telegram_logo.svg" height="25px" width="25px" alt="">
+                            </a>
+                        </button>
+                        <p data-translate="p_contact2">will be happy to answer them!</p>
+                    </p>  
+                    <div class="button-container-modal">
+                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gameraaron037@gmail.com" class="gmail-button" aria-label="Gmail">
+                        <img src="./img/Email-icon.png" alt="Email" class="icon" height="25px" width="25px">Email
+                    </a>
+                      <a href="https://t.me/aaron_228" class="telegram-button" aria-label="Telegram">
+                          <img src="./img/Telegram_logo.svg" alt="Telegram" class="icon" height="25px" width="25px"> Telegram
+                      </a>
+                  </div>
+                    <button class="button-close-error" data-translate="button_modal_error">Close</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "SiS7j_NpoNvNOy0-T",
+            });
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
